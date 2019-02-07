@@ -1,0 +1,131 @@
+@CHARSET "ISO-8859-1";
+
+/* Green Back */
+    .myButton1 {
+	background-color:#44c767;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:10px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Times New Roman;
+	font-size:12px;
+	padding:8px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+	}
+	.myButton1:hover {
+	background-color:#5cbf2a;
+	}
+	.myButton1:active {
+	position:relative;
+	top:1px;
+	}
+	
+/* RED Logout */
+	.myButton2{
+	background-color:#e4685d;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:10px;
+	border:1px solid #e4685d;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	padding:8px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e4685d;
+	}
+	.myButton2:hover {
+		background-color:#e4685d;
+	}
+	.myButton2:active {
+		position:relative;
+		top:1px;
+	}
+	
+/* white Button */
+	.myButton3 {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+	background:-moz-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-webkit-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-o-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-ms-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0);
+	background-color:#ededed;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#292629;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+	}
+	.myButton3:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+	background:-moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-ms-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed',GradientType=0);
+	background-color:#dfdfdf;
+	}
+	.myButton3:active {
+	position:relative;
+	top:1px;
+	}
+	
+/* Style the tab buttons  HEADER */
+	/* Style the navigation bar */
+	.navbar {
+	  width: 100%;
+	  background-color: #555;
+	  overflow: auto;
+	}
+	
+	/* Navbar links */
+	.navbar a {
+	  float: left;
+	  text-align: center;
+	  padding: 12px;
+	  color: white;
+	  text-decoration: none;
+	  font-size: 22px;
+	  margin-right: 1px;
+	  	
+	}
+	
+	/* Navbar links on mouse-over */
+	.navbar a:hover {
+	  background-color: #4CAF50;
+	 
+	}
+	
+	/* Current/active navbar link */
+	.active {
+	  background-color: #595959;
+	}
+	
+	/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+	@media screen and (max-width: 500px) {
+	  .navbar a {
+	    float: none;
+	    display: block;
+	      
+	  }
+	}
