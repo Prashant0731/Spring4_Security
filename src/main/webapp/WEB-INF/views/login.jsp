@@ -19,7 +19,8 @@
                     <div class="login-form">
                         
                         
-                       <a href="home" class="myButton1"> Back </a><a href="newuser"  class="myButton1"> Registration </a><br> 
+                       <a href="home" class="myButton1"> Back </a>
+                       <a href="newuser"  class="myButton1"> Registration </a><br> 
                        
                        <h3>Login page</h3> 
                         <form action="${loginUrl}" method="post" class="form-horizontal"> 

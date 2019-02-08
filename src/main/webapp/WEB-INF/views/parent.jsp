@@ -8,7 +8,7 @@
     <link href="<c:url value='/static/css/w3school.css' />" rel="stylesheet"></link>
 </head>
 <body>
-    Dear <strong>${user}</strong>,<br>
+    Dear <strong>${loggedinuser}</strong>,<br>
     Welcome to Parent Page.
     <a href="<c:url value="/logout"/>" class="myButton2">Logout</a>
 	<a href="home" class="myButton1"> Back </a><br>

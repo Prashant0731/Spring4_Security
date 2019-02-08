@@ -37,13 +37,30 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 	System.out.println(" SecurityConfiguration, protected void configure(HttpSecurity http) throws Exception {} ");
 	http.authorizeRequests()
-	.antMatchers("/", "/home").permitAll()
-	.antMatchers("/admin/**").access("hasRole('ADMIN')")
-	.antMatchers("/parent/**").access("hasRole('PARENT')")
-	.antMatchers("/db/**").access("hasRole('ADMIN') and hasRole('DBA')")
+		.antMatchers("/", "/home").permitAll()
+		.antMatchers("/admin/**").access("hasRole('ADMIN')")
+		.antMatchers("/parent/**").access("hasRole('PARENT')")
+		.antMatchers("/db/**").access("hasRole('ADMIN') and hasRole('DBA')")
+		.and().formLogin().loginPage("/login")
+		.usernameParameter("ssoId").passwordParameter("password")
+		.and().csrf()
+		.and().exceptionHandling().accessDeniedPage("/Access_Denied");
+	
+	
+/*	.antMatchers("/").permitAll()
+	.access("hasRole('USER') or hasRole('ADMIN') or hasRole('DBA')")
+	
+	.antMatchers("/newuser/**","/delete-user-*")
+	.access("hasRole('ADMIN')")
+
+	.antMatchers("/edit-user-*")		
+	.access("hasRole('ADMIN') or hasRole('DBA')")
+	
 	.and().formLogin().loginPage("/login")
+	.loginProcessingUrl("/login")
+	
 	.usernameParameter("ssoId").passwordParameter("password")
-	.and().csrf()
-	.and().exceptionHandling().accessDeniedPage("/Access_Denied");
+	.and().csrf().and().exceptionHandling().accessDeniedPage("/Access_Denied");
+*/	
 	}
 }
