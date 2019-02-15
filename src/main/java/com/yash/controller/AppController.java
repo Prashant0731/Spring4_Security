@@ -109,9 +109,9 @@ public class AppController {
         model.addAttribute("loggedinuser", getPrincipal());
         return "userslist";
     }
-/**
+/*
  * This method will provide the medium to add a new user.
- */    
+*/    
     @RequestMapping(value = { "/newuser" }, method = RequestMethod.GET)
     public String newUser(ModelMap model) {
     	System.out.println(" controller, public String newRegistration(ModelMap model){ START } ");
