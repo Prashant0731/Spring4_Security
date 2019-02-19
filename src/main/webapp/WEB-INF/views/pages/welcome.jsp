@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
-<%@ page isELIgnored="false"%>
+<%@ page isELIgnored="false" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
 	<head>
@@ -10,17 +10,6 @@
 	    <link href="<c:url value='/static/css/w3school.css' />" rel="stylesheet"></link>
 	</head>
 <body>
-	<!--HEADER  -->
-	<div class="navbar">
-		<a class="active" href="home"><i class="fa fa-fw fa-search"></i> Home</a> 
-		<a class="active" href="admin"><i class="fa fa-fw fa-envelope"></i> Admin</a> 
-		<a class="active" href="db"><i class="fa fa-fw fa-user"></i> DBA</a>
-		<a class="active" href="parent"><i class="fa fa-fw fa-user"></i> Parent</a>
-		<a class="active" href="login"><i class="fa fa-fw fa-home"></i> Login</a> 
-		<a class="active" href="newuser"><i class="fa fa-fw fa-user"></i> Registration</a>
-		<a class="active" href="list"><i class="fa fa-fw fa-user"></i>Records</a>
-	</div>
-	<br><br>
 	
     E-mail : ${greeting} this is a welcome page.<br>
     <br>
@@ -62,7 +51,7 @@
     		</h4>
     	</sec:authorize>
     </div>
-    
+
 </body>
 </html>
     

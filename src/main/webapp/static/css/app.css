@@ -1,42 +1,20 @@
 html{
-    background-color:#b3ffff;
+	font-family: sans-serif;
+    font-size: large;
+    background-color:#2F2F2F;
 }
  
 body, #mainWrapper {
     height: 100%;
-      /* The image used */
-  background-image: url("D:/Users/l91g6xj/Pictures/7.jpg");
+    background-color:rgb(245, 245, 245);
+    font-family: sans-serif;
+    font-size: large;
+ /* The image used */
+ /* background-image: url("D:/Users/l91g6xj/Pictures/7.jpg"); */	
+ /* Control the height of the image */
+    min-height: 380px;
+} 
 
-  /* Control the height of the image */
-  min-height: 380px;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-    
-    
-/*     background-image: -webkit-gradient(
-    linear,
-    right bottom,
-    right top,
-    color-stop(0, #EDEDED),
-    color-stop(0.08, #EAEAEA),
-    color-stop(1, #2F2F2F),
-    color-stop(1, #AAAAAA)
-);
-
-background-image: -o-linear-gradient(top, #EDEDED 0%, #EAEAEA 8%, #2F2F2F 100%, #AAAAAA 100%);
-background-image: -moz-linear-gradient(top, #EDEDED 0%, #EAEAEA 8%, #2F2F2F 100%, #AAAAAA 100%);
-background-image: -webkit-linear-gradient(top, #EDEDED 0%, #EAEAEA 8%, #2F2F2F 100%, #AAAAAA 100%);
-background-image: -ms-linear-gradient(top, #EDEDED 0%, #EAEAEA 8%, #2F2F2F 100%, #AAAAAA 100%);
-background-image: linear-gradient(to top, #EDEDED 0%, #EAEAEA 8%, #2F2F2F 100%, #AAAAAA 100%);
-} */
- 
-body, #mainWrapper, .form-control{
-    font-size:12px!important;
-}
  
 #mainWrapper {
     height: 100vh; 
@@ -54,6 +32,8 @@ body, #mainWrapper, .form-control{
 }
  
 .login-container {
+	font-family: sans-serif;
+    font-size: large;
     margin-top: 100px;
     background-color: floralwhite;
     width: 40%;
@@ -62,9 +42,115 @@ body, #mainWrapper, .form-control{
 }
  
 .login-card {
+	font-family: sans-serif;
+    font-size: large;
     width: 80%;
     margin: auto;
 }
 .login-form {
+	font-family: sans-serif;
+    font-size: large;
     padding: 10%;
+}
+
+
+
+#header {
+	font-size: 1.5em;
+    margin-left: 8.5%;
+    top: 0px;
+    width: 90%;
+	height: 15%;
+	position: fixed;
+	font-family: 'bgMed',arial,helvetica,sans-serif;
+    font-size: 20%;
+    color: #ffff80;
+    z-index: 15;
+    text-transform: uppercase;
+    background-color: #272727;
+    border-bottom: 5px solid hsl(180,70%,55%);
+    padding-top:10px;
+    text-align:center;
+    
+}
+
+#footer {
+	font-size: 1.5em;
+	margin-left:8.5%;
+    left: 0px;
+    bottom: 0px;
+    width: 90%;
+	height: 10%;
+	position: fixed;
+	font-family: 'bgMed',arial,helvetica,sans-serif;
+    color: #fff;
+    z-index: 15;
+    text-transform: uppercase;
+    background-color: #272727;
+	padding-top:20px;   
+    text-align:center;
+}
+
+
+#sidemenu {
+    width: 8%;
+    background-color:#2B2B2B;
+    height: 100%;
+    overflow: auto;
+    float: left;
+    z-index: 20;
+    position: fixed;
+    left: 0px;
+    margin-top:
+}
+
+#sidemenu #menu {
+    color: #fff;
+    text-align: right;
+    list-style-type: none;
+    margin-right: 40px;
+    float: right;
+}
+
+#sidemenu #menu li {
+    width: 150px;
+    height: 35px;
+    font-size: 1.5em;
+    padding-right:5px;
+    margin-top:8%;
+}
+
+#sidemenu #menu li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#sidemenu #menu li:active{
+	border-left: 5px solid hsl(180,70%,55%);
+}
+
+#sidemenu #menu li:hover {
+    background-color: #635555;
+    border-left: 5px solid hsl(180,70%,55%);
+}
+
+.logo{
+	float:left;
+	border-radius: 60%;
+	
+}
+
+#site-content {
+    width: 90%;
+    height: 100%;
+    overflow: auto;
+    float: left;
+    z-index: 20;
+    position: fixed;
+    min-height: 600px;
+    margin-top:8%;
+    margin-bottom:10%;
+    margin-left:9%;
+    padding-left:10px;
 }
