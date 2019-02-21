@@ -38,6 +38,11 @@ public abstract class AbstractDao<PK extends Serializable, T> {
        getSession().persist(entity);
    }
 
+   public void update(T entity) {
+	   System.out.println(" public void update(T entity) {} ");
+       getSession().update(entity);
+   }
+   
    public void delete(T entity) {
 	   System.out.println(" AbstractDao, public void delete(T entity){} ");
        getSession().delete(entity);

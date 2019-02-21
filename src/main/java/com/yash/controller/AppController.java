@@ -9,10 +9,12 @@ import javax.validation.Valid;
  
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
+import org.springframework.security.authentication.AuthenticationTrustResolver;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
+import org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -34,13 +36,22 @@ import com.yash.service.UserService;
 public class AppController {
 	
     @Autowired
-    UserProfileService userProfileService;
-    @Autowired
     UserService userService;
+     
+    @Autowired
+    UserProfileService userProfileService;
+     
     @Autowired
     MessageSource messageSource;
+ 
+    @Autowired
+    PersistentTokenBasedRememberMeServices persistentTokenBasedRememberMeServices;
+     
+    @Autowired
+    AuthenticationTrustResolver authenticationTrustResolver;
+ 
     
-	@RequestMapping(value ={"/" , "/home" }, method = RequestMethod.GET)
+	@RequestMapping(value ={"/","/home"}, method = RequestMethod.GET)
     public String homePage(ModelMap model) {
 		System.out.println(" Controller, public String homePage(ModelMap mode){ START } ");
 		model.addAttribute("greeting", "Hi, Welcome to Prashant");
@@ -78,6 +89,8 @@ public class AppController {
         System.out.println(" Controller, public String parentPage(ModelMap model){ END } ");
     	return "parent";
     }
+   
+    
     @RequestMapping(value = "/Access_Denied", method = RequestMethod.GET)
     public String accessDeniedPage(ModelMap model) {
         System.out.println(" Controller, public String accessDeniedPage(ModelMap model){ START } ");
@@ -102,12 +115,13 @@ public class AppController {
     }
   
 /*This method will list all existing users.*/
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    @RequestMapping(value = {"/list"}, method = RequestMethod.GET)
     public String listUsers(ModelMap model) {
         List<User> users = userService.findAllUsers();
         model.addAttribute("users", users);
         model.addAttribute("loggedinuser", getPrincipal());
         return "userslist";
+  
     }
 /*
  * This method will provide the medium to add a new user.
@@ -149,7 +163,10 @@ public class AppController {
         model.addAttribute("loggedinuser", getPrincipal());
         return "registrationsuccess";
     }
-
+    
+	/**
+	 * This method returns the principal[user-name] of logged-in user.
+	 */
     private String getPrincipal(){
     	System.out.println(" Controller, private String getPrincipal(){ START }");
         String userName = null;
@@ -172,7 +189,8 @@ public class AppController {
     }
 
 /******************************UPDATE************************************************************************/   
-/*This method will provide the medium to update an existing user.*/
+
+    /*This method will provide the medium to update an existing user.*/
     @RequestMapping(value = { "/edit-user-{ssoId}" }, method = RequestMethod.GET)
     public String editUser(@PathVariable String ssoId, ModelMap model) {
         User user = userService.findBySso(ssoId);
@@ -181,10 +199,12 @@ public class AppController {
         model.addAttribute("loggedinuser", getPrincipal());
         return "registration";
     }
+    
 /**
  * This method will be called on form submission, handling POST request for
  * updating user in database. It also validates the user input
 **/
+    
     @RequestMapping(value = { "/edit-user-{ssoId}" }, method = RequestMethod.POST)
     public String updateUser(@Valid User user, BindingResult result,ModelMap model, @PathVariable String ssoId) {
         if (result.hasErrors()){
@@ -195,6 +215,7 @@ public class AppController {
         model.addAttribute("loggedinuser", getPrincipal());
         return "registrationsuccess";
     }
+    
 /**
  * This method will delete an user by it's SSOID value.
  */
@@ -202,5 +223,13 @@ public class AppController {
     public String deleteUser(@PathVariable String ssoId) {
         userService.deleteUserBySSO(ssoId);
         return "redirect:/list";
+    }
+    
+    /**
+     * This method returns true if users is already authenticated [logged-in], else false.
+     */
+    private boolean isCurrentAuthenticationAnonymous() {
+        final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        return authenticationTrustResolver.isAnonymous(authentication);
     }
 }

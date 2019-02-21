@@ -18,10 +18,11 @@
 </head>
 
 <body>
+
 	<nav>
 	    <a href="${pageContext.request.contextPath}/">
-	    <img src="${pageContext.request.contextPath}/static/img/p.png" class="logo" alt="Paris" width="160" height="200" ></a>
-	   <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	    <img src="${pageContext.request.contextPath}/static/img/t.gif" class="logo" alt="Paris" width="160" height="200" ></a>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	   
 	    <ul id="menu">
 	       <li><a class="active" href="${pageContext.request.contextPath}/">Home</a></li>

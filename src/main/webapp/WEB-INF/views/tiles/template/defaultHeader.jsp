@@ -8,7 +8,7 @@
 </head>
 <body>
 <div>
-        <h6>Tiles Demo</h6>
+        <h3>Tiles Demo</h3>
 </div>
 
 </body>
