@@ -34,8 +34,5 @@ public class UserProfileDaoImpl extends AbstractDao<Integer, UserProfile> implem
 	        System.out.println(" UserProfileDaoImpl, public List<UserProfile> findAll(){ end } ");
 	        return (List<UserProfile>)crit.list();
 	    }
-	     
-
-	     
-	   
+   
 }

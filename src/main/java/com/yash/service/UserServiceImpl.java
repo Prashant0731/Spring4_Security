@@ -23,22 +23,19 @@ public class UserServiceImpl implements UserService{
     private PasswordEncoder passwordEncoder;    
     
     public User findById(int id) {
-        System.out.println(" UserServiceImpl,  public User findById(int id){} ");
         return dao.findById(id);
     }
-    
-    public User findBySso(String sso) {
-        System.out.println(" UserServiceImpl, public User findBySso(String sso){ Start } ");
+ 
+    public User findBySSO(String sso) {
         User user = dao.findBySSO(sso);
-        System.out.println(" UserServiceImpl, public User findBySso(String sso){ End } ");
         return user;
     }
-    
-    public void save(User user){
+ 
+    public void saveUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        System.out.println(" UserServiceImpl, public void save(User user){}");
-    	dao.save(user);
+        dao.save(user);
     }
+ 
     /*
      * Since the method is running with Transaction, No need to call hibernate update explicitly.
      * Just fetch the entity from db and update it with proper values within transaction.
@@ -49,7 +46,7 @@ public class UserServiceImpl implements UserService{
         if(entity!=null){
             entity.setSsoId(user.getSsoId());
             if(!user.getPassword().equals(entity.getPassword())){
-    //          entity.setPassword(passwordEncoder.encode(user.getPassword()));
+                entity.setPassword(passwordEncoder.encode(user.getPassword()));
             }
             entity.setFirstName(user.getFirstName());
             entity.setLastName(user.getLastName());
@@ -57,20 +54,19 @@ public class UserServiceImpl implements UserService{
             entity.setUserProfiles(user.getUserProfiles());
         }
     }
+ 
      
-    public List<User> findAllUsers() {
-    	System.out.println(" UserServiceImpl, public List<User> findAllUsers() {} ");
-        return dao.findAllUsers();
-    }
-    
-    public boolean isUserSSOUnique(Integer id, String sso){
-    	System.out.println(" UserServiceImpl, public boolean isUserSSOUnique(Integer id, String sso){} ");
-        User user = findBySso(sso);
-        return ( user == null || ((id != null) && (user.getId() == id)));
-    }
-    
     public void deleteUserBySSO(String sso) {
         dao.deleteBySSO(sso);
+    }
+ 
+    public List<User> findAllUsers() {
+        return dao.findAllUsers();
+    }
+ 
+    public boolean isUserSSOUnique(Integer id, String sso) {
+        User user = findBySSO(sso);
+        return ( user == null || ((id != null) && (user.getId() == id)));
     }
 
 }

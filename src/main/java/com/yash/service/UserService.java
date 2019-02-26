@@ -6,12 +6,18 @@ import com.yash.model.User;
 
 public interface UserService {
 	
-	void save(User user);
-    User findById(int id);
-    User findBySso(String sso);
+	User findById(int id);
     
-    List<User> findAllUsers();
+    User findBySSO(String sso);
+     
+    void saveUser(User user);
+     
     void updateUser(User user);
+     
     void deleteUserBySSO(String sso);
+ 
+    List<User> findAllUsers(); 
+     
     boolean isUserSSOUnique(Integer id, String sso);
+    
 }

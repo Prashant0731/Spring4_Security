@@ -6,13 +6,13 @@ import com.yash.model.User;
 
 public interface UserDao {
      
-    void save(User user);
+	User findById(int id);
     
-    User findById(int id);
-     
     User findBySSO(String sso);
-    
-    List<User> findAllUsers();
-    
+     
+    void save(User user);
+     
     void deleteBySSO(String sso);
+     
+    List<User> findAllUsers();
 }
