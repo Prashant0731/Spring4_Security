@@ -15,7 +15,10 @@
  
 <body>
 	<a href="home" class="myButton1"> Back </a><br>
+	         
+  
     <div class="generic-container">
+      
         <%@include file="authheader.jsp" %>   
         <div class="panel panel-default">
               <!-- Default panel contents -->

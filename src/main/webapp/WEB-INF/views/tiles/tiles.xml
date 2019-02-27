@@ -3,11 +3,10 @@
 
 <tiles-definitions>  
   
-   <!-- Base Definition -->
+   <!-- Base Definition 1 -->
    <definition name="base-definition"
        template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">  
-       <put-attribute name="title" value="" />  
-       
+       <put-attribute name="title" value="" />        
        <put-attribute name="header" value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />  
        <put-attribute name="menu" value="/WEB-INF/views/tiles/template/defaultMenu.jsp" />  
        <put-attribute name="body" value="" />  
@@ -16,52 +15,63 @@
    
    <!-- Home Page -->
    <definition name="welcome" extends="base-definition">  
-       <put-attribute name="title" value="" />  
+       <put-attribute name="title" value="welcome" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/welcome.jsp" />  
    </definition>
    
-      <!-- admin Page -->
+   <!-- admin Page -->
    <definition name="admin" extends="base-definition">  
        <put-attribute name="title" value="admin" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/admin.jsp" />  
    </definition> 
    
    
-    <!-- Dba Page -->
-   <definition name="db" extends="base-definition">  
+   <!-- Dba Page -->
+   <definition name="dba" extends="base-definition">  
        <put-attribute name="title" value="dba" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/dba.jsp" />  
    </definition> 
    
-    <!-- parent Page -->
+   <!-- parent Page -->
    <definition name="parent" extends="base-definition">  
        <put-attribute name="title" value="parent" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/parent.jsp" />  
    </definition> 
    
-    <!-- login Page -->
+   <!-- login Page -->
    <definition name="login" extends="base-definition">  
        <put-attribute name="title" value="login" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/login.jsp" />  
    </definition>   
    
-      <!-- NewUser-us Page -->
+   <!-- NewUser-us Page -->
    <definition name="registration" extends="base-definition">  
        <put-attribute name="title" value="registration" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/registration.jsp" />  
    </definition> 
-   
-      <!-- list Page -->
+    
+   <!--  list Page -->
    <definition name="userslist" extends="base-definition">  
        <put-attribute name="title" value="userslist" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/userslist.jsp" />  
    </definition> 
    
-         <!-- Successhandler Page -->
+   <!-- Access_Denied Page -->
    <definition name="accessDenied" extends="base-definition">  
        <put-attribute name="title" value="Access_Denied" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/accessDenied.jsp" />  
    </definition> 
    
+   <!-- Successhandler Page -->
+   <definition name="registrationsuccess" extends="base-definition">  
+       <put-attribute name="title" value="registrationsuccess" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/registrationsuccess.jsp" />  
+   </definition> 
+   
+   <!-- authheader Page -->
+   <definition name="authheader" extends="base-definition">  
+       <put-attribute name="title" value="authheader" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/authheader.jsp" />  
+   </definition> 
    
 </tiles-definitions>

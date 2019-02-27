@@ -4,7 +4,8 @@ public enum UserProfileType {
 	
     USER("USER"),
     DBA("DBA"),
-    ADMIN("ADMIN");
+    ADMIN("ADMIN"),
+	PARENT("PARENT");
 
     String userProfileType;
     

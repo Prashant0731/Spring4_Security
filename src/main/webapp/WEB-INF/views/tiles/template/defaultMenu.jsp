@@ -25,12 +25,13 @@
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	   
 	    <ul id="menu">
-	       <li><a class="active" href="${pageContext.request.contextPath}/">Home</a></li>
-	       <li><a class="active" href="${pageContext.request.contextPath}/admin">DBA</a></li>
-	       <li><a class="active" href="${pageContext.request.contextPath}/db">Parent</a></li>
-	       <li><a class="active" href="${pageContext.request.contextPath}/login">Login </a></li>
-	       <li><a class="active" href="${pageContext.request.contextPath}/newuser">Registration</a></li>
-	       <li><a class="active" href="${pageContext.request.contextPath}/list">Records</a></li>
+			<li><a class="active" href="${pageContext.request.contextPath}/home">Home</a></li>
+			<li><a class="active" href="${pageContext.request.contextPath}/db">DBA</a></li>
+			<li><a class="active" href="${pageContext.request.contextPath}/admin"> Admin</a></li>
+			<li><a class="active" href="${pageContext.request.contextPath}/parent">Parent</a></li>	       
+			<li><a class="active" href="${pageContext.request.contextPath}/login">Login </a></li>
+			<li><a class="active" href="${pageContext.request.contextPath}/newuser">Registration</a></li>
+			<li><a class="active" href="${pageContext.request.contextPath}/list">Records</a></li>
 	    </ul>
 	</nav>
 </body>
