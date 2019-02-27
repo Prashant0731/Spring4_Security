@@ -49,7 +49,7 @@ public class AppController {
     @Autowired
     AuthenticationTrustResolver authenticationTrustResolver;
    
-	@RequestMapping(value ="/home", method = RequestMethod.GET)
+	@RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
     public String homePage(ModelMap model) {
 		System.out.println(" Controller, public String homePage(ModelMap mode){ START } ");
 		model.addAttribute("greeting", "Hi, Welcome to Prashant");
@@ -92,7 +92,7 @@ public class AppController {
     /**
      * This method will list all existing users.
      */
-    @RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String listUsers(ModelMap model) {
  
         List<User> users = userService.findAllUsers();
