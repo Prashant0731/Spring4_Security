@@ -25,13 +25,13 @@
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	   
 	    <ul id="menu">
-			<li><a class="active" href="${pageContext.request.contextPath}/home">Home</a></li>
-			<li><a class="active" href="${pageContext.request.contextPath}/db">DBA</a></li>
-			<li><a class="active" href="${pageContext.request.contextPath}/admin"> Admin</a></li>
-			<li><a class="active" href="${pageContext.request.contextPath}/parent">Parent</a></li>	       
-			<li><a class="active" href="${pageContext.request.contextPath}/login">Login </a></li>
-			<li><a class="active" href="${pageContext.request.contextPath}/newuser">Registration</a></li>
-			<li><a class="active" href="${pageContext.request.contextPath}/list">Records</a></li>
+			<li><a class="active" href="${pageContext.request.contextPath}/home" class="myButton1" >Home</a></li> <br>
+			<li><a class="active" href="${pageContext.request.contextPath}/db" class="myButton1">    DBA</a></li> <br>
+			<li><a class="active" href="${pageContext.request.contextPath}/admin" class="myButton1"> Admin</a></li> <br>
+			<li><a class="active" href="${pageContext.request.contextPath}/parent" class="myButton1">Parent</a></li> <br>	       
+			<li><a class="active" href="${pageContext.request.contextPath}/login" class="myButton1"> Login </a></li> <br>
+			<li><a class="active" href="${pageContext.request.contextPath}/newuser" class="myButton1">Registration</a></li> <br>
+			<li><a class="active" href="${pageContext.request.contextPath}/list" class="myButton1">  Records</a></li> <br>
 	    </ul>
 	</nav>
 </body>

@@ -1,14 +1,14 @@
 html{
-	font-family: sans-serif;
-    font-size: large;
+	font-family: 'bgMed',arial,helvetica,sans-serif;
+    font-size: 50px;
     background-color:#2F2F2F;
 }
  
 body, #mainWrapper {
     height: 100%;
-    background-color:rgb(245, 245, 245);
-    font-family: sans-serif;
-    font-size: large;
+    /* background-color:rgb(245, 245, 245); */
+	font-family: 'bgMed',arial,helvetica,sans-serif;
+    font-size: 50px;
  /* The image used */
  /* background-image: url("D:/Users/l91g6xj/Pictures/7.jpg"); */	
  /* Control the height of the image */
@@ -32,8 +32,8 @@ body, #mainWrapper {
 }
  
 .login-container {
-	font-family: sans-serif;
-    font-size: large;
+	font-family: 'bgMed',arial,helvetica,sans-serif;
+    font-size: 50px;
     margin-top: 100px;
     background-color: floralwhite;
     width: 40%;
@@ -42,32 +42,31 @@ body, #mainWrapper {
 }
  
 .login-card {
-	font-family: sans-serif;
-    font-size: large;
+	font-family: 'bgMed',arial,helvetica,sans-serif;
+    font-size: 50px;
     width: 80%;
     margin: auto;
 }
 .login-form {
-	font-family: sans-serif;
-    font-size: large;
+	font-family: 'bgMed',arial,helvetica,sans-serif;
+    font-size: 50px;
     padding: 10%;
 }
 
 
 
 #header {
-	font-size: 1.5em;
     margin-left: 8.5%;
     top: 0px;
     width: 90%;
-	height: 15%;
+	height: 13%;
 	position: fixed;
 	font-family: 'bgMed',arial,helvetica,sans-serif;
-    font-size: 20%;
-    color: #ffff80;
+    font-size: 50px;
+    color: #ffffff;
     z-index: 15;
     text-transform: uppercase;
-    background-color: #272727;
+    background-color: #008488f5;
     border-bottom: 5px solid hsl(180,70%,55%);
     padding-top:10px;
     text-align:center;
@@ -75,7 +74,6 @@ body, #mainWrapper {
 }
 
 #footer {
-	font-size: 1.5em;
 	margin-left:8.5%;
     left: 0px;
     bottom: 0px;
@@ -83,25 +81,32 @@ body, #mainWrapper {
 	height: 10%;
 	position: fixed;
 	font-family: 'bgMed',arial,helvetica,sans-serif;
+    font-size: 48px;	
     color: #fff;
     z-index: 15;
     text-transform: uppercase;
-    background-color: #272727;
+    background-color: #008488f5;
 	padding-top:20px;   
     text-align:center;
 }
 
 
 #sidemenu {
+	font-family: 'bgMed',arial,helvetica,sans-serif;
+    font-size: 35px;
+    font-size-adjust: 0.58;
+    text-align:left;
+    left: 30px;	
     width: 8%;
-    background-color:#2B2B2B;
+    background-color: #008488f5;
     height: 100%;
     overflow: auto;
     float: left;
-    z-index: 20;
+    z-index: 15;
     position: fixed;
     left: 0px;
-    margin-top:
+    margin-top:auto;
+    text-transform: uppercase;
 }
 
 #sidemenu #menu {
@@ -109,7 +114,6 @@ body, #mainWrapper {
     text-align: right;
     list-style-type: none;
     margin-right: 40px;
-    float: right;
 }
 
 #sidemenu #menu li {
@@ -123,7 +127,7 @@ body, #mainWrapper {
 #sidemenu #menu li a {
     text-decoration: none;
     text-transform: uppercase;
-    color: #fff;
+    color: #000000;
 }
 
 #sidemenu #menu li:active{
@@ -142,6 +146,9 @@ body, #mainWrapper {
 }
 
 #site-content {
+	
+	font-family: 'bgMed',arial,helvetica,sans-serif;
+    font-size: 50px;
     width: 90%;
     height: 100%;
     overflow: auto;

@@ -7,9 +7,10 @@
 <title>This is DefaultHeader</title>
 </head>
 <body>
-<div>
-        <h3>Tiles Demo</h3>
-</div>
+	<div>
+	    Dear <strong>${loggedinuser}</strong>,<br>
+	    <a href="<c:url value="/logout" />">Logout</a>
+	</div>
 
 </body>
 </html>

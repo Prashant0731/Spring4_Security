@@ -6,9 +6,8 @@
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+	font-family: 'bgMed',arial,helvetica,sans-serif;
+    font-size: 50px;
 }
 body {
   margin: 0;
@@ -2677,6 +2676,7 @@ fieldset[disabled] .checkbox label {
   padding-left: 0;
 }
 .input-sm {
+
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -5652,6 +5652,9 @@ a.list-group-item-danger.active:focus {
   padding-bottom: 75%;
 }
 .well {
+	
+  font-family: 'bgMed',arial,helvetica,sans-serif;
+  font-size: 50px;
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
