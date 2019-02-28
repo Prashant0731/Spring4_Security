@@ -1077,7 +1077,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  background-color: #f8f8f8;
 }
 input,
 button,
@@ -2250,6 +2250,9 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
+
+  font-family: 'bgMed',arial,helvetica,sans-serif;
+  font-size: 50px;
   padding: 8px;
   line-height: 1.42857143;
   vertical-align: top;

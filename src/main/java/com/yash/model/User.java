@@ -2,7 +2,8 @@ package com.yash.model;
 
 import java.util.HashSet;
 import java.util.Set;
- 
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,8 +13,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
- 
+
 @Entity
 @Table(name="APP_USER")
 public class User {
@@ -39,6 +41,9 @@ public class User {
     @Column(name="STATE", nullable=false)
     private String state= State.ACTIVE.getState();
  
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<UserDocument> userDocuments = new HashSet<UserDocument>();
+    
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "APP_USER_USER_PROFILE", 
              joinColumns = { @JoinColumn(name = "USER_ID") }, 
@@ -109,6 +114,15 @@ public class User {
         this.userProfiles = userProfiles;
     }
 
+    public Set<UserDocument> getUserDocuments() {
+        return userDocuments;
+    }
+ 
+    public void setUserDocuments(Set<UserDocument> userDocuments) {
+        this.userDocuments = userDocuments;
+    }
+    
+    
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -120,6 +134,7 @@ public class User {
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		result = prime * result + ((ssoId == null) ? 0 : ssoId.hashCode());
 		result = prime * result + ((state == null) ? 0 : state.hashCode());
+		result = prime * result + ((userDocuments == null) ? 0 : userDocuments.hashCode());
 		result = prime * result + ((userProfiles == null) ? 0 : userProfiles.hashCode());
 		return result;
 	}
@@ -165,6 +180,11 @@ public class User {
 				return false;
 		} else if (!state.equals(other.state))
 			return false;
+		if (userDocuments == null) {
+			if (other.userDocuments != null)
+				return false;
+		} else if (!userDocuments.equals(other.userDocuments))
+			return false;
 		if (userProfiles == null) {
 			if (other.userProfiles != null)
 				return false;
@@ -176,8 +196,8 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", ssoId=" + ssoId + ", password=" + password + ", firstName=" + firstName
-				+ ", lastName=" + lastName + ", email=" + email + ", state=" + state + ", userProfiles=" + userProfiles
-				+ "]";
+				+ ", lastName=" + lastName + ", email=" + email + ", state=" + state + ", userDocuments="
+				+ userDocuments + ", userProfiles=" + userProfiles + "]";
 	}
    
 }

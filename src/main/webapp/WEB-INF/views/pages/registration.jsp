@@ -16,9 +16,9 @@
 <body >
 	<a href="home" class="myButton1"> Back </a><br>
     <div class="generic-container">
-        <%@include file="authheader.jsp" %>
+        <%-- <%@include file="authheader.jsp" %> --%>
  
-        <div class="well lead">User Registration Form</div>
+        <div class="well lead" style="text-align: center;"><b>-User Registration Form-</b></div>
         <form:form style="text-align: center;" method="POST" modelAttribute="user" class="form-horizontal">
             <form:input type="hidden" path="id" id="id"/>
              

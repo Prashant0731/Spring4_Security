@@ -8,6 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Admin page</title>
     <link href="<c:url value='/static/css/w3school.css' />" rel="stylesheet"></link>
+    
 </head>
 <body>
     Dear <strong>${loggedinuser}</strong>,<br>
