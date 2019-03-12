@@ -193,6 +193,9 @@ public class AppController {
      */
     @RequestMapping(value = { "/delete-user-{ssoId}" }, method = RequestMethod.GET)
     public String deleteUser(@PathVariable String ssoId) {
+    	if( ssoId == "") {
+    		throw new RuntimeException(" Some thing went wrong ");
+    	}
         userService.deleteUserBySSO(ssoId);
         return "redirect:/list";
     }

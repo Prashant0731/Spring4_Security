@@ -16,8 +16,6 @@
 <body >
 	<a href="home" class="myButton1"> Back </a><br>
     <div class="generic-container">
-        <%-- <%@include file="authheader.jsp" %> --%>
- 
         <div class="well lead" style="text-align: center;"><b>-User Registration Form-</b></div>
         <form:form style="text-align: center;" method="POST" modelAttribute="user" class="form-horizontal">
             <form:input type="hidden" path="id" id="id"/>
@@ -113,6 +111,13 @@
                     </c:choose>
                 </div>
             </div>
+            
+	       <c:if test="${edit}">
+	            <span class="well pull-left">
+	                <a href="<c:url value='/add-document-${user.id}' />">Click here to upload/manage your documents</a>   
+	            </span>
+	        </c:if>
+        
         </form:form>
     </div>
 </body>
