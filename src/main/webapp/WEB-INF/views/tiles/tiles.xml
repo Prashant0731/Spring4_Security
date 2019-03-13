@@ -74,4 +74,10 @@
        <put-attribute name="body" value="/WEB-INF/views/pages/authheader.jsp" />  
    </definition> 
    
+   <!-- managedocuments -->
+      <definition name="managedocuments" extends="base-definition">  
+       <put-attribute name="title" value="managedocuments" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/managedocuments.jsp" />  
+   </definition> 
+   
 </tiles-definitions>

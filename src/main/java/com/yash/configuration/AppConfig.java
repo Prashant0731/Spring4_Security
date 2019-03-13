@@ -43,13 +43,13 @@ public class AppConfig extends WebMvcConfigurerAdapter{
 	        viewResolver.setSuffix(".jsp");
 	        registry.viewResolver(viewResolver);
 	    }
-	
-	   /* Configure ResourceHandlers to serve static resources like CSS/ Javascript etc. . */    
-	   @Override
-	   public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		   System.out.println(" AppConfig,  addResourceHandlers(ResourceHandlerRegistry registry{ /static/** } ");
-		   registry.addResourceHandler("/static/**").addResourceLocations("/static/");
-	   }
+
+   /* Configure ResourceHandlers to serve static resources like CSS/ Javascript etc. . */    
+   @Override
+   public void addResourceHandlers(ResourceHandlerRegistry registry) {
+	   System.out.println(" AppConfig,  addResourceHandlers(ResourceHandlerRegistry registry{ /static/** } ");
+	   registry.addResourceHandler("/static/**").addResourceLocations("/static/");
+   }
    
 	/*
 	* Configure Converter to be used.
@@ -81,10 +81,6 @@ public class AppConfig extends WebMvcConfigurerAdapter{
        matcher.setUseRegisteredSuffixPatternMatch(true);
    }
    
-   
-   
-   
- /**********************************************************/  
    /**
     * Configure TilesConfigurer.
     */
