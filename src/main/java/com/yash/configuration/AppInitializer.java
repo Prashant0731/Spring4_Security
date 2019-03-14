@@ -6,19 +6,17 @@ import javax.servlet.ServletRegistration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class AppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
-    @Override
+    
+	@Override
     protected Class<?>[] getRootConfigClasses() {
-    	System.out.println(" SpringMvcInitializer, protected Class<?>[] getRootConfigClasses(){} ");
         return new Class[] { AppConfig.class };
     }
     @Override
     protected Class<?>[] getServletConfigClasses() {
-    	System.out.println(" SpringMvcInitializer, protected Class<?>[] getServletConfigClasses(){} ");
         return null;
     }
     @Override
     protected String[] getServletMappings() {
-    	System.out.println(" SpringMvcInitializer, protected String[] getServletMappings(){} ");
         return new String[] { "/" };
     }
     
@@ -33,12 +31,8 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
     }
      
     /*Set these variables for your project needs*/
-     
-    private static final String LOCATION = "C:/mytemp/";
- 
+    private static final String LOCATION = "D:\\WORKSPACE\\Spring4_Security\\Pics";
     private static final long MAX_FILE_SIZE = 1024 * 1024 * 25;//25MB
-     
     private static final long MAX_REQUEST_SIZE = 1024 * 1024 * 30;//30MB
- 
     private static final int FILE_SIZE_THRESHOLD = 0;
 }

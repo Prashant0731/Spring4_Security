@@ -36,56 +36,46 @@ public class AppController {
  
     @Autowired
     UserService userService;
-     
     @Autowired
     UserProfileService userProfileService;
-     
     @Autowired
     MessageSource messageSource;
- 
     @Autowired
     PersistentTokenBasedRememberMeServices persistentTokenBasedRememberMeServices;
-     
     @Autowired
     AuthenticationTrustResolver authenticationTrustResolver;
    
 	@RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
     public String homePage(ModelMap model) {
-		System.out.println(" Controller, public String homePage(ModelMap mode){ START } ");
 		model.addAttribute("greeting", "Hi, Welcome to Prashant");
 		model.addAttribute("loggedinuser", getPrincipal());
-		System.out.println(" Controller, public String homePage(ModelMap mode){ END } ");
 		return "welcome";
     }
+	
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String adminPage(ModelMap model) {
-    	System.out.println(" Controller, public String adminPage(ModelMap model){ START } ");
 		User user = new User();
 		model.addAttribute("user", user);
 		model.addAttribute("edit", false);
         model.addAttribute("loggedinuser", getPrincipal());
-        System.out.println(" Controller, public String adminPage(ModelMap model){ END } ");
         return "admin";
     }
+    
     @RequestMapping(value = "/db", method = RequestMethod.GET)
     public String dbaPage(ModelMap model) {
-    	System.out.println(" Controller, public String dbaPage(ModelMap model){ START } ");
     	User user = new User();
     	model.addAttribute("user", user);
 		model.addAttribute("edit", false);    	
         model.addAttribute("loggedinuser", getPrincipal());
-        System.out.println(" Controller, public String dbaPage(ModelMap model){ END } ");
         return "dba";
     }
     
     @RequestMapping(value="/parent", method = RequestMethod.GET)
     public String parentPage(ModelMap model){
-        System.out.println(" Controller, public String parentPage(ModelMap model){ START } ");
     	User user = new User();
     	model.addAttribute("user", user);
 		model.addAttribute("edit", false);    	
         model.addAttribute("loggedinuser", getPrincipal());
-        System.out.println(" Controller, public String parentPage(ModelMap model){ END } ");
     	return "parent";
     }
     
@@ -100,7 +90,7 @@ public class AppController {
         model.addAttribute("loggedinuser", getPrincipal());
         return "userslist";
     }
- 
+    
     /**
      * This method will provide the medium to add a new user.
      */
@@ -118,36 +108,30 @@ public class AppController {
      * saving user in database. It also validates the user input
      */
     @RequestMapping(value = { "/newuser" }, method = RequestMethod.POST)
-    public String saveUser(@Valid User user, BindingResult result,
-            ModelMap model) {
- 
+    public String saveUser(@Valid User user, BindingResult result, ModelMap model) {
+    	
         if (result.hasErrors()) {
             return "registration";
         }
- 
         /*
          * Preferred way to achieve uniqueness of field [sso] should be implementing custom @Unique annotation 
          * and applying it on field [sso] of Model class [User].
-         * 
          * Below mentioned peace of code [if block] is to demonstrate that you can fill custom errors outside the validation
          * framework as well while still using internationalized messages.
-         * 
          */
         if(!userService.isUserSSOUnique(user.getId(), user.getSsoId())){
             FieldError ssoError =new FieldError("user","ssoId",messageSource.getMessage("non.unique.ssoId", new String[]{user.getSsoId()}, Locale.getDefault()));
             result.addError(ssoError);
             return "registration";
         }
-         
+        
         userService.saveUser(user);
- 
+        
         model.addAttribute("success", "User " + user.getFirstName() + " "+ user.getLastName() + " registered successfully");
         model.addAttribute("loggedinuser", getPrincipal());
         //return "success";
         return "registrationsuccess";
     }
- 
- 
     /**
      * This method will provide the medium to update an existing user.
      */
@@ -159,35 +143,26 @@ public class AppController {
         model.addAttribute("loggedinuser", getPrincipal());
         return "registration";
     }
-     
     /**
      * This method will be called on form submission, handling POST request for
      * updating user in database. It also validates the user input
      */
     @RequestMapping(value = { "/edit-user-{ssoId}" }, method = RequestMethod.POST)
-    public String updateUser(@Valid User user, BindingResult result,
-            ModelMap model, @PathVariable String ssoId) {
- 
+    public String updateUser(@Valid User user, BindingResult result, ModelMap model, @PathVariable String ssoId) {
         if (result.hasErrors()) {
             return "registration";
         }
- 
         /*//Uncomment below 'if block' if you WANT TO ALLOW UPDATING SSO_ID in UI which is a unique key to a User.
         if(!userService.isUserSSOUnique(user.getId(), user.getSsoId())){
             FieldError ssoError =new FieldError("user","ssoId",messageSource.getMessage("non.unique.ssoId", new String[]{user.getSsoId()}, Locale.getDefault()));
             result.addError(ssoError);
             return "registration";
         }*/
- 
- 
         userService.updateUser(user);
- 
         model.addAttribute("success", "User " + user.getFirstName() + " "+ user.getLastName() + " updated successfully");
         model.addAttribute("loggedinuser", getPrincipal());
         return "registrationsuccess";
     }
- 
-     
     /**
      * This method will delete an user by it's SSOID value.
      */
@@ -199,8 +174,6 @@ public class AppController {
         userService.deleteUserBySSO(ssoId);
         return "redirect:/list";
     }
-     
- 
     /**
      * This method will provide UserProfile list to views
      */
@@ -208,7 +181,6 @@ public class AppController {
     public List<UserProfile> initializeProfiles() {
         return userProfileService.findAll();
     }
-     
     /**
      * This method handles Access-Denied redirect.
      */
@@ -217,7 +189,6 @@ public class AppController {
         model.addAttribute("loggedinuser", getPrincipal());
         return "accessDenied";
     }
- 
     /**
      * This method handles login GET requests.
      * If users is already logged-in and tries to goto login page again, will be redirected to list page.
@@ -230,7 +201,6 @@ public class AppController {
             return "redirect:/list";  
         }
     }
- 
     /**
      * This method handles logout requests.
      * Toggle the handlers if you are RememberMe functionality is useless in your app.
@@ -245,14 +215,12 @@ public class AppController {
         }
         return "redirect:/login?logout";
     }
- 
     /**
      * This method returns the principal[user-name] of logged-in user.
      */
     private String getPrincipal(){
         String userName = null;
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
- 
         if (principal instanceof UserDetails) {
             userName = ((UserDetails)principal).getUsername();
         } else {
@@ -260,7 +228,6 @@ public class AppController {
         }
         return userName;
     }
-     
     /**
      * This method returns true if users is already authenticated [logged-in], else false.
      */

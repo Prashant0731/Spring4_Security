@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ page isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
  
 <!DOCTYPE html>
 <html>
@@ -25,13 +24,13 @@
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	   
 	    <ul id="menu">
-			<li><a class="active" href="${pageContext.request.contextPath}/home" class="myButton1" >Home</a></li> <br>
+			<li><a class="active" href="${pageContext.request.contextPath}/home" class="myButton1" >Home</a></li></br>
 			<li><a class="active" href="${pageContext.request.contextPath}/db" class="myButton1">    DBA</a></li> <br>
 			<li><a class="active" href="${pageContext.request.contextPath}/admin" class="myButton1"> Admin</a></li> <br>
 			<li><a class="active" href="${pageContext.request.contextPath}/parent" class="myButton1">Parent</a></li> <br>	       
 			<li><a class="active" href="${pageContext.request.contextPath}/login" class="myButton1"> Login </a></li> <br>
 			<li><a class="active" href="${pageContext.request.contextPath}/newuser" class="myButton1">Registration</a></li> <br>
-			<li><a class="active" href="${pageContext.request.contextPath}/list" class="myButton1">  Records</a></li> <br>
+			<li><a class="active" href="${pageContext.request.contextPath}/list" class="myButton1">  Records</a></li> 
 	    </ul>
 	</nav>
 </body>

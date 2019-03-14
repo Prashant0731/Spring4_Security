@@ -15,8 +15,6 @@ import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
-import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
-import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
 import com.yash.converter.RoleToUserProfileConverter;
 
@@ -25,45 +23,41 @@ import com.yash.converter.RoleToUserProfileConverter;
 @ComponentScan(basePackages = "com.yash")
 public class AppConfig extends WebMvcConfigurerAdapter{
    
-	 @Autowired
-	    RoleToUserProfileConverter roleToUserProfileConverter;
+	@Autowired
+    RoleToUserProfileConverter roleToUserProfileConverter;
 	     
-	    @Bean(name="multipartResolver")
-	    public StandardServletMultipartResolver resolver(){
-	        return new StandardServletMultipartResolver();
-	    }
+    @Bean(name="multipartResolver")
+    public StandardServletMultipartResolver resolver(){
+        return new StandardServletMultipartResolver();
+    }
 	 
-	    /**
-	     * Configure ViewResolvers to deliver preferred views.
-	     */
-	    public void configureViewResolvers1(ViewResolverRegistry registry) {
-	        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-	        viewResolver.setViewClass(JstlView.class);
-	        viewResolver.setPrefix("/WEB-INF/views/");
-	        viewResolver.setSuffix(".jsp");
-	        registry.viewResolver(viewResolver);
-	    }
-
+    /**
+     * Configure ViewResolvers to deliver preferred views.
+     */
+    @Override
+    public void configureViewResolvers(ViewResolverRegistry registry) {
+ 
+        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+        viewResolver.setViewClass(JstlView.class);
+        viewResolver.setPrefix("/WEB-INF/views/pages/");
+        viewResolver.setSuffix(".jsp");
+        registry.viewResolver(viewResolver);
+    }
+    
    /* Configure ResourceHandlers to serve static resources like CSS/ Javascript etc. . */    
    @Override
    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-	   System.out.println(" AppConfig,  addResourceHandlers(ResourceHandlerRegistry registry{ /static/** } ");
 	   registry.addResourceHandler("/static/**").addResourceLocations("/static/");
    }
    
-	/*
-	* Configure Converter to be used.
-	* In our example, we need a converter to convert string values[Roles] to UserProfiles in newUser.jsp
-	*/
+
+   /*Configure Converter to be used.In our example, we need a converter to convert string values[Roles] to UserProfiles in newUser.jsp*/
    @Override
    public void addFormatters(FormatterRegistry registry) {
-       System.out.println(" AppConfig, public void addFormatters(FormatterRegistry registry) {} ");
 	   registry.addConverter(roleToUserProfileConverter);
    }
-   
-  /*
-   * Configure MessageSource to lookup any validation/error message in internationalized property files
-   */
+  
+   /*Configure MessageSource to lookup any validation/error message in internationalized property files*/
    @Bean
    public MessageSource messageSource() {
        ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
@@ -79,25 +73,5 @@ public class AppConfig extends WebMvcConfigurerAdapter{
    @Override
    public void configurePathMatch(PathMatchConfigurer matcher) {
        matcher.setUseRegisteredSuffixPatternMatch(true);
-   }
-   
-   /**
-    * Configure TilesConfigurer.
-    */
-   @Bean
-   public TilesConfigurer tilesConfigurer(){
-       TilesConfigurer tilesConfigurer = new TilesConfigurer();
-       tilesConfigurer.setDefinitions(new String[] {"/WEB-INF/views/**/tiles.xml"});
-       tilesConfigurer.setCheckRefresh(true);
-       return tilesConfigurer;
-   }
-
-   /**
-    * Configure ViewResolvers to deliver preferred views.
-    */
-   @Override
-   public void configureViewResolvers(ViewResolverRegistry registry) {
-       TilesViewResolver viewResolver = new TilesViewResolver();
-       registry.viewResolver(viewResolver);
    }
 }
