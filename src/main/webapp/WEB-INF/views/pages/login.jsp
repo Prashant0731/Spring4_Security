@@ -16,6 +16,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<link href="static/css/company.css" rel="stylesheet">	
 </head>
+
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -41,10 +42,11 @@
     </div>
   </div>
 </nav>
+
 	<div class="container">
 	<c:url var="loginUrl" value="/login" />
 	<br><br>
-	<h3>Login page</h3> 
+	<h3 align="center"><b>Login page</b></h3> 
     <a href="home" class="myButton1"> Back </a>
     <a href="newuser"  class="myButton1"> Registration </a><br> 
 	    <form action="${loginUrl}" method="post" class="form-horizontal"> 
@@ -73,5 +75,13 @@
 	        <button type="submit" class="btn btn-default" value="log in">Submit</button>
 	    </form>
 	</div>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+<script src="static/js/sample.js"></script>		
 </body>
 </html>
