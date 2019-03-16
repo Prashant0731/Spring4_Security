@@ -17,6 +17,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link href="static/css/company.css" rel="stylesheet">
 </head>
+
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -36,7 +37,7 @@
         <li><a href="#portfolio">PORTFOLIO</a></li>
         <li><a href="#pricing">PRICING</a></li>
         <li><a href="#about">ABOUT</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="contactUs">CONTACT</a></li>
         <li><a href="login">LOGIN</a></li>
       </ul>
     </div>
@@ -256,29 +257,23 @@
   </div>
 </div>
 
-
-
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT</h2>
-  <form:form style="text-align: center;" method="POST" modelAttribute="contectUs" >
   <div class="row">
     <div class="col-sm-5">
       <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Indore, India</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +91 8305968583</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +91 8305855378</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> team@millennium.com</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
     </div>
-    
-    
     <div class="col-sm-7 slideanim">
       <div class="row">
         <div class="col-sm-6 form-group">
-          	<form:input class="form-control" id="name" name="name" placeholder="Name" type="text" required path="name" />
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
-          	<form:input class="form-control" id="email" name="email" placeholder="Email" type="email" required path="email" />
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
         </div>
       </div>
       <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
@@ -289,7 +284,6 @@
       </div>
     </div>
   </div>
-  </form:form>
 </div>
 
 <!-- Image of location/map -->

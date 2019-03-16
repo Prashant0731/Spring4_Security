@@ -121,7 +121,4 @@ public class UserDocument {
         return "UserDocument [id=" + id + ", name=" + name + ", description="
                 + description + ", type=" + type + "]";
     }
- 
- 
-     
 }

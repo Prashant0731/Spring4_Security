@@ -9,6 +9,7 @@ import javax.validation.Valid;
  
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
+import org.springframework.http.MediaType;
 import org.springframework.security.authentication.AuthenticationTrustResolver;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -24,8 +25,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.yash.model.Contact;
 import com.yash.model.User;
 import com.yash.model.UserProfile;
+import com.yash.service.ContactService;
 import com.yash.service.UserProfileService;
 import com.yash.service.UserService;
  
@@ -37,6 +40,10 @@ public class AppController {
     @Autowired
     UserService userService;
     @Autowired
+    ContactService contactService;
+    
+    
+    @Autowired
     UserProfileService userProfileService;
     @Autowired
     MessageSource messageSource;
@@ -44,6 +51,8 @@ public class AppController {
     PersistentTokenBasedRememberMeServices persistentTokenBasedRememberMeServices;
     @Autowired
     AuthenticationTrustResolver authenticationTrustResolver;
+    
+    
    
 	@RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
     public String homePage(ModelMap model) {
@@ -51,6 +60,22 @@ public class AppController {
 		model.addAttribute("loggedinuser", getPrincipal());
 		return "welcome";
     }
+	
+	@RequestMapping(value = {"/contactUs"}, method = RequestMethod.GET)
+	public String showContactUsPage(ModelMap model) {
+		System.out.println(" public String showContactUsPage(ModelMap model) {} ");
+		Contact contact = new Contact();
+        model.addAttribute("contact", contact);
+        model.addAttribute("edit", false);
+		return "contact";
+	}
+	
+	@RequestMapping(value = {"/contactUs"}, method = RequestMethod.POST)
+	public String contactUsPage(@Valid Contact contact, ModelMap model) {
+		System.out.println(" 	public String contactUsPage(@Valid Contact contact, ModelMap model, BindingResult result) {} ");
+		contactService.saveContact(contact);
+		return "redirect:/home";
+	}
 	
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String adminPage(ModelMap model) {
