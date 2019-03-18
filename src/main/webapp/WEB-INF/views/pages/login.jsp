@@ -16,6 +16,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<link href="static/css/company.css" rel="stylesheet">	
+	<script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 
 <body>
@@ -76,6 +77,11 @@
 	        <div class="checkbox">
 	          <label><input type="checkbox" name="remember-me"> Remember Me</label>  
 	        </div>
+	        
+	        <div class="g-recaptcha"
+            data-sitekey="6LcuS5gUAAAAAHT5jn-701Eaphzp7AfTngIjGecz">
+            </div>
+	        
 	        <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
 	        <button type="submit" class="btn btn-default" value="log in">Login</button>
 	    </form>
@@ -85,8 +91,9 @@
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+  <p>Bootstrap Theme Made By <a href="/" title="Visit Millennium">Millennium</a></p>
 </footer>
-<script src="static/js/sample.js"></script>		
-</body>
+
+<script src="static/js/sample.js"></script>	
+ </body>
 </html>

@@ -16,33 +16,35 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link href="static/css/company.css" rel="stylesheet">
+  <link rel="stylesheet" href="D:/WORKSPACE/Spring4_Security/Pics">
+  
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="home">HOME</a></li>
-        <li><a href="#services">SERVICES</a></li>
-        <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#pricing">PRICING</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="contactUs">CONTACT</a></li>
-        <li><a href="login">LOGIN</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>                        
+	      </button>
+	      <a class="navbar-brand" href="#myPage"><b>PPOA</b>  Developers</a>   		
+	    </div>
+	    <div class="collapse navbar-collapse" id="myNavbar">
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="home">HOME</a></li>
+	        <li><a href="#services">SERVICES</a></li>
+	        <li><a href="#portfolio">PORTFOLIO</a></li>
+	        <li><a href="#pricing">PRICING</a></li>
+	        <li><a href="#about">ABOUT</a></li>
+	        <li><a href="contactUs">CONTACT</a></li>
+	        <li><a href="login">LOGIN</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
 
 <div class="jumbotron text-center">
   <h1>Millennium</h1> 
@@ -135,21 +137,21 @@
   <div class="row text-center slideanim">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="https://www.w3schools.com/bootstrap/newyork.jpg" alt="Paris" width="400" height="300">
+        <img src="static/img/paris_1.gif" alt="Paris" width="400" height="300">
         <p><strong>Paris</strong></p>
         <p>Yes, we built Paris</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="https://www.w3schools.com/bootstrap/sanfran.jpg" alt="New York" width="400" height="300">
+        <img src="static/img/newyork_1.gif" alt="New York" width="400" height="300">
         <p><strong>New York</strong></p>
         <p>We built New York</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="https://www.w3schools.com/bootstrap/paris.jpg" alt="San Francisco" width="400" height="300">
+        <img src="static/img/SanFrancisco_1.gif" alt="San Francisco" width="400" height="300">
         <p><strong>San Francisco</strong></p>
         <p>Yes, San Fran is ours</p>
       </div>
@@ -294,7 +296,7 @@
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+  <p>Bootstrap Theme Made By <a href="/" title="Visit Millennium">Millennium</a></p>
 </footer>
 
 <script src="static/js/sample.js"></script>	
