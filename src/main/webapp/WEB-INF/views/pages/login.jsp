@@ -5,10 +5,11 @@
  
 <html>
 <head>
-	<title>Login page</title>
+	<meta charset="ISO-8859-1">
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login page</title>
 	<link href="<c:url value='/static/css/w3school.css' />" rel="stylesheet"></link>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
@@ -17,7 +18,7 @@
 	<link href="static/css/company.css" rel="stylesheet">	
 </head>
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body>
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -46,10 +47,13 @@
 	<div class="container">
 	<c:url var="loginUrl" value="/login" />
 	<br><br>
+	
 	<h3 align="center"><b>Login page</b></h3> 
     <a href="home" class="myButton1"> Back </a>
     <a href="newuser"  class="myButton1"> Registration </a><br> 
+	    
 	    <form action="${loginUrl}" method="post" class="form-horizontal"> 
+	      
 	        <c:if test="${param.error != null}">
 	            <div class="alert alert-danger">
 	                <p>Invalid username and password.</p>
@@ -60,6 +64,7 @@
 	                <p>You have been logged out successfully.</p>
 	            </div>
 	        </c:if>
+	        
 	        <div class="form-group">
 	            <label for="username"></label>
 	            <input type="text" class="form-control" id="username" name="ssoId" placeholder="Enter Username" required>
@@ -72,7 +77,7 @@
 	          <label><input type="checkbox" name="remember-me"> Remember Me</label>  
 	        </div>
 	        <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
-	        <button type="submit" class="btn btn-default" value="log in">Submit</button>
+	        <button type="submit" class="btn btn-default" value="log in">Login</button>
 	    </form>
 	</div>
 

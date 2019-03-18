@@ -4,21 +4,23 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
  
 <html>
- 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Users List</title>
-    <link href="<c:url value='/static/css/bootstrap.css' />" rel="stylesheet"></link>
-    <link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
-    <link href="<c:url value='/static/css/w3school.css' />" rel="stylesheet"></link>
+	<title>Users List</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<meta charset="utf-8">
+	<link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
+	<link href="<c:url value='/static/css/w3school.css' />" rel="stylesheet"></link>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link href="static/css/company.css" rel="stylesheet">    
 </head>
- 
 <body>
 	<a href="home" class="myButton1"> Back </a><br>
-	         
-  
     <div class="generic-container">
-      
         <%@include file="authheader.jsp" %>   
         <div class="panel panel-default">
               <!-- Default panel contents -->
@@ -39,7 +41,6 @@
                         <sec:authorize access="hasRole('ADMIN')">
                             <th width="100"></th>
                         </sec:authorize>
-                         
                     </tr>
                 </thead>
                 <tbody>

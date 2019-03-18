@@ -1,18 +1,13 @@
 html{
-	font-family: sans-serif;
-    font-size: large;
-    background-color:#2F2F2F;
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
 }
  
 body, #mainWrapper {
-    height: 100%;
-    /* background-color:rgb(245, 245, 245); */
-	font-family: 'bgMed',arial,helvetica,sans-serif;
-    font-size: 50px;
- /* The image used */
- /* background-image: url("D:/Users/l91g6xj/Pictures/7.jpg"); */	
- /* Control the height of the image */
-    min-height: 380px;
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
 } 
 
  

@@ -7,6 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<link href="<c:url value='/static/css/w3school.css' />" rel="stylesheet"></link>
 </head>
 <body>
 	<div class="authbar" class="well lead">

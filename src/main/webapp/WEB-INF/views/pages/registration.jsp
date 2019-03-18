@@ -6,15 +6,21 @@
 <html>
  
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>User Registration Form</title>
-    <link href="<c:url value='/static/css/bootstrap.css' />" rel="stylesheet"></link>
+   	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
     <link href="<c:url value='/static/css/w3school.css' />" rel="stylesheet"></link>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link href="static/css/company.css" rel="stylesheet">   
 </head>
  
 <body >
-	<a href="home" class="myButton1"> Back </a><br>
+	<a href="list" class="myButton1"> Back </a><br>
     <div class="generic-container">
         <div class="well lead" style="text-align: center;"><b>-User Registration Form-</b></div>
         <form:form style="text-align: center;" method="POST" modelAttribute="user" class="form-horizontal">
@@ -24,7 +30,7 @@
                 <div class="form-group col-md-12">
                     <label class="col-md-3 control-lable" for="firstName">First Name</label>
                     <div class="col-md-7">
-                        <form:input type="text" path="firstName" id="firstName" class="form-control input-sm"/>
+                        <form:input type="text" path="firstName" id="firstName" class="form-control input-sm" required="required"/>
                         <div class="has-error">
                             <form:errors path="firstName" class="help-inline"/>
                         </div>
@@ -36,7 +42,7 @@
                 <div class="form-group col-md-12">
                     <label class="col-md-3 control-lable" for="lastName">Last Name</label>
                     <div class="col-md-7">
-                        <form:input type="text" path="lastName" id="lastName" class="form-control input-sm" />
+                        <form:input type="text" path="lastName" id="lastName" class="form-control input-sm" required="required"/>
                         <div class="has-error">
                             <form:errors path="lastName" class="help-inline"/>
                         </div>
@@ -50,10 +56,10 @@
                     <div class="col-md-7">
                         <c:choose>
                             <c:when test="${edit}">
-                                <form:input type="text" path="ssoId" id="ssoId" class="form-control input-sm" disabled="true"/>
+                                <form:input type="text" path="ssoId" id="ssoId" class="form-control input-sm" required="required" disabled="true" />
                             </c:when>
                             <c:otherwise>
-                                <form:input type="text" path="ssoId" id="ssoId" class="form-control input-sm" />
+                                <form:input type="text" path="ssoId" id="ssoId" class="form-control input-sm" required="required"/>
                                 <div class="has-error">
                                     <form:errors path="ssoId" class="help-inline"/>
                                 </div>
@@ -67,7 +73,7 @@
                 <div class="form-group col-md-12">
                     <label class="col-md-3 control-lable" for="password">Password</label>
                     <div class="col-md-7">
-                        <form:input type="password" path="password" id="password" class="form-control input-sm" />
+                        <form:input type="password" path="password" id="password" class="form-control input-sm" required="required"/>
                         <div class="has-error">
                             <form:errors path="password" class="help-inline"/>
                         </div>
@@ -79,7 +85,7 @@
                 <div class="form-group col-md-12">
                     <label class="col-md-3 control-lable" for="email">Email</label>
                     <div class="col-md-7">
-                        <form:input type="text" path="email" id="email" class="form-control input-sm" />
+                        <form:input type="text" path="email" id="email" class="form-control input-sm" required="required"/>
                         <div class="has-error">
                             <form:errors path="email" class="help-inline"/>
                         </div>
@@ -91,7 +97,7 @@
                 <div class="form-group col-md-12">
                     <label class="col-md-3 control-lable" for="userProfiles">Roles</label>
                     <div class="col-md-7">
-                        <form:select path="userProfiles" items="${roles}" multiple="true" itemValue="id" itemLabel="type" class="form-control input-sm" />
+                        <form:select path="userProfiles" items="${roles}" multiple="true" itemValue="id" itemLabel="type" class="form-control input-sm" required="required"/>
                         <div class="has-error">
                             <form:errors path="userProfiles" class="help-inline"/>
                         </div>

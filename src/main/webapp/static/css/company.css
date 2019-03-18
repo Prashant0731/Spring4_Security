@@ -16,7 +16,14 @@ body {
     color: #303030;
     font-weight: 400;
     margin-bottom: 30px;
-  }  
+  } 
+   
+  countryname, .country-name {
+    font-family: "SegoeSemiBold";
+    color: #f4511e;
+    margin-top: 0;
+	}
+
   .jumbotron {
     background-color: #f4511e;
     color: #fff;
