@@ -1,18 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
-<%@ page isELIgnored="false"%>
-<html>
-	<head>
-	<meta charset="ISO-8859-1">
-	<title>This is DefaultHeader</title>
-	<link href="<c:url value='/static/css/w3school.css' />" rel="stylesheet"></link>
-	</head>
-<body>
-	<div style="text-align: right;">
-	    Dear <strong>${loggedinuser}</strong>,<br> 
-	    <a href="<c:url value="/logout"/>" class="myButton2">Logout</a>
-	</div>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
-</body>
-</html>
+<html>
+
+<head>
+<title>First Web Application</title>
+<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>

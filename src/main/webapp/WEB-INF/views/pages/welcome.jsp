@@ -41,6 +41,7 @@
 	        <li><a href="#about">ABOUT</a></li>
 	        <li><a href="contactUs">CONTACT</a></li>
 	        <li><a href="login">LOGIN</a></li>
+	        <li><a href="todo">TODO</a></li>
 	      </ul>
 	    </div>
 	  </div>
