@@ -1,17 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"  pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ page isELIgnored="false"%>
- 
-<html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page isELIgnored="false" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>	
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>First Web Application</title>
-<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="static/css/company.css" rel="stylesheet">
+  <link rel="stylesheet" href="D:/WORKSPACE/Spring4_Security/Pics">
 </head>
 
-<body> 
+<body>
+<%@ include file="common/header.jsp" %>
+<%@ include file="common/navigation.jsp" %>
+
 	<div class="container">
 		<table class="table table-striped">
 			<caption>Your todos are</caption>
@@ -42,15 +53,16 @@
 			<a class="button" href="add-todo">ADD TODO</a>
 		</div>
 	</div>
+	
+<%@ include file="common/footer.jsp" %>
 
-<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="webjars/bootstrap-datepicker/1.0.1/js/bootstrap-datepicker.js"></script>
-<script>
-	$('#targetDate').datepicker({
-		format : 'dd/mm/yyyy'
-	});
-</script>
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="home#about" title="Visit Millennium">PPOA Developer's</a></p>
+</footer>
 
-</body>
+<script src="static/js/sample.js"></script>	
+ </body>
 </html>

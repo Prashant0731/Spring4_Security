@@ -38,6 +38,7 @@
         <li><a href="home">ABOUT</a></li>
         <li><a href="contactUs">CONTACT</a></li>
         <li><a href="login">LOGIN</a></li>
+	   	<li><a href="list-todos">TODO</a></li>       
       </ul>
     </div>
   </div>

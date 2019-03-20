@@ -17,6 +17,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<link href="static/css/company.css" rel="stylesheet">	
 	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<link href="<c:url value='/static/css/style.css' />" rel="stylesheet"></link>
 </head>
 
 <body>
@@ -40,6 +41,7 @@
         <li><a href="#about">ABOUT</a></li>
         <li><a href="contactUs">CONTACT</a></li>
         <li><a href="login">LOGIN</a></li>
+      	<li><a href="list-todos">TODO</a></li>
       </ul>
     </div>
   </div>

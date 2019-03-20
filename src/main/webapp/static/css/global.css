@@ -1,0 +1,86 @@
+@import "bootstrap.min.css";
+@import "owl.carousel.min.css";
+@import "animate.css";
+@import "style.css";
+@import "responsive.css";
+@import "https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700";
+
+
+
+body {
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #000;
+}
+ul li {
+  line-height: 1.571;
+  font-size: 14px;
+  font-weight: 400;
+}
+.container {
+  max-width: 1040px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover, a:focus {
+  transition: 300ms all;
+  text-decoration: none;
+}
+*,
+button,
+a,
+img {
+  outline: none;
+}
+button:focus{
+  outline: none;
+}
+p {
+  font-size: 14px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    color: #616161;
+    line-height: 1.8;
+    margin: 0;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+}
+
+h5 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.righ {
+  margin-right: 0 !important;
+}
+.lef {
+  margin-left: 0;
+}
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.half {
+  width: 50%;
+  float: left;
+}
+.padding-left-20 {
+  padding-left: 20px;
+}
+.margin-left-20 {
+  margin-left: 20px;
+}

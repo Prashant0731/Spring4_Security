@@ -16,6 +16,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link href="static/css/company.css" rel="stylesheet">
+  <link href="<c:url value='/static/css/style.css' />" rel="stylesheet"></link>
   <link rel="stylesheet" href="D:/WORKSPACE/Spring4_Security/Pics">
   
 </head>
@@ -82,9 +83,8 @@
     </div>
     <div class="col-sm-8">
       <h2>Our Values</h2><br>
-      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h4><strong>MISSION:</strong> We aim to provide cost effective web based back office solutions to various industries. Our solutions are reckoned the best in understanding the customer requirement. Developing new software creates profound corporate change that must be anticipated, managed and nurtured.</h4><br>
+      <p><strong>VISION:</strong> We take Software projects as the challenge and opportunity to prove our caliber in streamlined and optimized process flow, Deliver excellent, creative and innovative services is not only our work it's our passion. We employ a large pool of software engineers coming from different backgrounds. We are able to balance product development efforts and project duration to your business software needs.</p>
     </div>
   </div>
 </div>
@@ -96,39 +96,104 @@
   <br>
   <div class="row slideanim">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-off logo-small"></span>
-      <h4>POWER</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <a class="glyphicon glyphicon-off logo-small" data-toggle="tab" href="#Digital"></a>
+      <h4>Digital-Marketing</h4>
+      <p>-</p>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-heart logo-small"></span>
-      <h4>LOVE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <a class="glyphicon glyphicon-heart logo-small" data-toggle="tab" href="#Web_Design"></a>
+      <h4>Web Design</h4>
+      <p>-</p>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-lock logo-small"></span>
-      <h4>JOB DONE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <a class="glyphicon glyphicon-lock logo-small" data-toggle="tab" href="#Web_Development"></a>
+      <h4>Web Development</h4>
+      <p>-</p>
     </div>
   </div>
+  
   <br><br>
   <div class="row slideanim">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-leaf logo-small"></span>
-      <h4>GREEN</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <a class="glyphicon glyphicon-leaf logo-small" data-toggle="tab" href="#Android"></a>
+      <h4>Android/iOS</h4>
+      <p>-</p>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-certificate logo-small"></span>
-      <h4>CERTIFIED</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <a class="glyphicon glyphicon-certificate logo-small" data-toggle="tab" href="#E-Commerce"></a>
+      <h4>E-Commerce</h4>
+      <p>-</p>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-wrench logo-small"></span>
-      <h4 style="color:#303030;">HARD WORK</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <a class="glyphicon glyphicon-wrench logo-small" data-toggle="tab" href="#Java_Application"></a>
+      <h4>Java Application</h4>
+      <p>-</p>
     </div>
   </div>
+  
+    <div class="tab-content clearfix">
+        <div class="tab-pane" id="Digital">
+            <h4>Digital-Marketing</h4>
+            <h6>Our Strengths : Your Preferences </h6>
+            <p>
+                The foremost aim of the Internet marketing services at MILLENNIUM is to help the client in creating a global presence and generating
+                successful recognition on the Internet worldwide. Having a website is not enough
+                to get your business growing; rather the main focus is to help that business grow
+                by every viewer attention. An attractive website not always reflects a decorative
+                layout of flowers and color bands, but it signifies a site which has the potential
+                ability to ensure regular visits from the same potential client. A website should
+                be simple and client focused regardless of the decorative images used in its design.
+                The aim of MILLENNIUM not only resides inside the name Internet Marketing, but it is
+                hidden in the name of our below mentioned customized services of Positive Internet
+                Marketing.
+            </p>
+        </div>
+        <div class="tab-pane" id="Web_Design">
+            <h4>Web Design</h4>
+            <p>
+                We are more oriented towards the concepts and operation of Search Engine Operation, arrangement and prominence of key words.
+                Our team has the desires and passion of a skilled professional to create a site that
+                not only does it ranks among the top but provides an interactive environment for
+                the customer.
+            </p>
+        </div>
+        <div class="tab-pane" id="Web_Development">
+            <h4>Web Development</h4>
+            <p>
+                In software engineering, a software development methodology (also known as a system development methodology, software development
+                life cycle, software development process, software process) is a division of software
+                development work into distinct phases or activities with the intent of better planning
+                and management.
+            </p>
+        </div>
+        <div class="tab-pane" id="Android">
+            <h4>Android/iOS Development</h4>
+            <p>
+                We provide services to develop all kinds of apps that includes games apps, social application apps and many more. our expert
+                team of android developers will meet your requirements with fast work time in a cost
+                effectual manner. our app developers are experienced in all up-to-the-minute technologies
+                to create the mobile applications to your custom needs.
+            </p>
+        </div>
+        <div class="tab-pane" id="E-Commerce">
+            <h4>E-Commerce Solutions</h4>
+            <p>
+                MILLENNIUM Software Solutions offers in-depth knowledge of end-to-end e-business, B2B and e-commerce development solutions for
+                different market verticals to help you compete and excel in the digital marketplace.
+                MILLENNIUM Software Solutions the name for all your IT related needs. We provide the
+                solutions which abridge technology and business.
+            </p>
+        </div>
+        <div class="tab-pane" id="Java_Application">
+            <h4>Java Application</h4>
+            <p>
+                We provide services to develop all kinds of apps that includes games apps, social application apps and many more. our expert
+                team of android developers will meet your requirements with fast work time in a cost
+                effectual manner. our app developers are experienced in all up-to-the-minute technologies
+                to create the mobile applications to your custom needs.
+            </p>
+        </div>
+    </div>
 </div>
 
 <!-- Container (Portfolio Section) -->
@@ -166,18 +231,22 @@
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+        <h4>"This company is the best. I am so happy with the result!"<br><span>Mr OM Prakash Patidar,client, Comment Box</span></h4>
       </div>
       <div class="item">
-        <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+        <h4>"One word... WOW!!"<br><span>Monish Siddaki, Vice President, Rep Inc</span></h4>
       </div>
       <div class="item">
-        <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+        <h4>"Could I... BE any more happy with this company?"<br><span>Ankit Saktpuriya, Actor, FriendsAlot</span></h4>
+      </div>
+      <div class="item">
+        <h4>"I'm happy with this company?"<br><span>Priya Raikwar, Vice President, Rep Inc</span></h4>
       </div>
     </div>
 
