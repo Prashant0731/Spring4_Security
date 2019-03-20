@@ -112,7 +112,8 @@
                             <input type="submit" value="Update" class="btn btn-primary btn-sm"/> or <a href="<c:url value='/list' />">Cancel</a>
                         </c:when>
                         <c:otherwise>
-                            <input type="submit" value="Register" class="btn btn-primary btn-sm"/> or <a href="<c:url value='/list' />">Cancel</a>
+                            <input type="submit" value="Register" class="myButton1"/> or <%-- <a href="<c:url value='/list' href="list" />">Cancel</a> --%>
+                            <a href="list" class="myButton2"> Cancel </a>
                         </c:otherwise>
                     </c:choose>
                 </div>
@@ -131,7 +132,7 @@
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Bootstrap Theme Made By <a href="/" title="Visit Millennium">Millennium</a></p>
+  <p>Bootstrap Theme Made By <a href="home#about" title="Visit Millennium">Millennium</a></p>
 </footer>
 
 <script src="static/js/sample.js"></script>	

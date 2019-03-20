@@ -17,6 +17,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link href="static/css/company.css" rel="stylesheet">
   <link rel="stylesheet" href="D:/WORKSPACE/Spring4_Security/Pics">
+  <link href="<c:url value='/static/css/w3school.css' />" rel="stylesheet"></link>
 </head>
 <body>
 <%@ include file="common/header.jsp" %>
@@ -39,7 +40,7 @@
 			<form:errors path="targetDate" cssClass="text-warning" />
 		</fieldset>
 
-		<button type="submit" class="btn btn-success">Add</button>
+		<button type="submit" class="myButton1">Add</button>
 	</form:form>
 </div>
 

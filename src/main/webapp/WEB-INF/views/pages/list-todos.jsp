@@ -17,6 +17,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link href="static/css/company.css" rel="stylesheet">
   <link rel="stylesheet" href="D:/WORKSPACE/Spring4_Security/Pics">
+  <link href="<c:url value='/static/css/w3school.css' />" rel="stylesheet"></link>
 </head>
 
 <body>
@@ -41,16 +42,14 @@
 						<td>${todo.desc}</td>
 						<td> <fmt:formatDate value="${todo.targetDate}" pattern="dd/MM/yyyy"/> </td>
 						<td>${todo.done}</td>
-						<td><a type="button" class="btn btn-success"
-							href="update-todo?id=${todo.id}">Update</a></td>
-						<td><a type="button" class="btn btn-warning"
-							href="delete-todo?id=${todo.id}">Delete</a></td>
+						<td><a type="button" class="myButton1" href="update-todo?id=${todo.id}">Update</a></td>
+						<td><a type="button" class="myButton2" href="delete-todo?id=${todo.id}">Delete</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
 		<div>
-			<a class="button" href="add-todo">ADD TODO</a>
+
 		</div>
 	</div>
 	

@@ -45,13 +45,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         		.antMatchers("/newuser").permitAll()
         
         		.antMatchers("/list", "/db", "/parent", "/admin")
-                .access("hasRole('USER') or hasRole('ADMIN') or hasRole('DBA')")
-                
+       //         .access("hasRole('USER') or hasRole('ADMIN') or hasRole('DBA')")
+                .access("hasRole('ADMIN') or hasRole('DBA')")
+          
                 .antMatchers("/newuser/**", "/delete-user-*")
                 .access("hasRole('ADMIN')")
                 
                 .antMatchers("/edit-user-*")
                 .access("hasRole('ADMIN') or hasRole('DBA')")
+                
+                
                 
                 .and().formLogin().loginPage("/login")
                 .loginProcessingUrl("/login").usernameParameter("ssoId").passwordParameter("password").and()

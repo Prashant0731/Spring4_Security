@@ -8,7 +8,6 @@
 <head>
   <!-- Theme Made By www.w3schools.com -->
   <title>Bootstrap Theme Company Page</title>
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
@@ -68,7 +67,8 @@
       <h2>About Company Page</h2><br>
       <h4>Millennium Software Solutions is a leading information technology consulting and services provider, providing end-to-end solutions for diversified clients from varied industry. We have been a pioneer in adopting technology to ensure enhanced customer choice, convenience and gratification.</h4><br>
       <p>We believe in the simple principles of customer first. Our core values have helped us to continuously remain preferred partners to large organizations and some fortune 500 companies for years together. Our main vision is to make customers successful by being collaborators in engineering technology solutions. Put Passion and Commitment to Work.</p>
-      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+      <br><a  href="contactUs" class="btn btn-default btn-lg">Get in Touch</a>
+            
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-signal logo"></span>
@@ -334,7 +334,7 @@
 
 
 <!-- Image of location/map -->
-<img src="https://www.w3schools.com/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%"> 
+ <img src="https://www.w3schools.com/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%"> 
 <!-- <iframe style="align-content: center;" src="https://www.google.com/maps/embed?pb=!4v1552630733353!6m8!1m7!1sCAoSLEFGMVFpcFBqZU13cnlsZ1hfclRseUxrMUtEeXFJOC1HbzRIcl85cUZwUWda!2m2!1d22.6852093!2d75.8730774!3f302.95!4f23.060000000000002!5f1.2780929574532185" class="w3-image w3-greyscale-min" width="1300" height="393"  style="width:100%" ></iframe> -->
 
 <footer class="container-fluid text-center">

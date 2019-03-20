@@ -3,6 +3,7 @@ package com.yash.controller;
 import java.util.List;
 import java.util.Locale;
 
+import javax.management.relation.Role;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
@@ -218,12 +219,16 @@ public class AppController {
      * If users is already logged-in and tries to goto login page again, will be redirected to list page.
      */
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String loginPage() {
+    public String loginPage() {		
         if (isCurrentAuthenticationAnonymous()) {
             return "login";
-        } else {
+        } 
+ 
+        else {
           return "redirect:/list";  
         }
+    
+    	
     }
     /**
      * This method handles logout requests.

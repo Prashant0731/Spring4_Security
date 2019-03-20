@@ -52,8 +52,8 @@
 	<br><br>
 	
 	<h3 align="center"><b>Login page</b></h3> 
-    <a href="home" class="myButton1"> Back </a>
-    <a href="newuser"  class="myButton1"> Registration </a><br> 
+    <a href="home" class="btn btn-default"> Back </a>
+    <a href="newuser"  class="btn btn-default"> Registration </a><br><br> 
 	    
 	    <form action="${loginUrl}" method="post" class="form-horizontal"> 
 	      
@@ -83,7 +83,7 @@
 	        <div class="g-recaptcha"
             data-sitekey="6LcuS5gUAAAAAHT5jn-701Eaphzp7AfTngIjGecz">
             </div>
-	        
+	        <br>
 	        <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
 	        <button type="submit" class="btn btn-default" value="log in">Login</button>
 	    </form>
