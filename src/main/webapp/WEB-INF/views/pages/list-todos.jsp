@@ -49,7 +49,7 @@
 			</tbody>
 		</table>
 		<div>
-
+			<input type="button" class="myButton1" onclick="location.href='add-todo';" value="ADD TODO" />
 		</div>
 	</div>
 	
