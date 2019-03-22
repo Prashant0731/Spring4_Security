@@ -15,7 +15,7 @@ public class WelcomeController {
 	@RequestMapping(value="/wc", method= RequestMethod.GET)
 	public String showWelcomePage(ModelMap model) {
 		model.put("name", "admin");
-		return "welcome";
+		return "list-todos";
 	}
 	
 	@SuppressWarnings("unused")

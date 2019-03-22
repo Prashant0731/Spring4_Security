@@ -8,5 +8,6 @@
 </head>
 <body>
 <h1>hello jsp page</h1>
+<a href="/wc" >TODO</a>
 </body>
 </html>

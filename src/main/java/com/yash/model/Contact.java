@@ -14,7 +14,7 @@ public class Contact {
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer cId;
     
-    @Column(name="cMobile", length=20, nullable=false)
+    @Column(name="cMobile", length=30, nullable=false)
 	private String cMobile;
 
 	@Column(name="cName", length=50, nullable=false)

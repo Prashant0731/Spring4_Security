@@ -2,17 +2,30 @@ package com.yash.model;
 
 import java.util.Date;
 
-import javax.validation.constraints.Size;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="Todo")
 public class Todo {
+   
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
+    
+
     private String user;
     
-    @Size(min=10, message="Enter at least 10 Characters...")
+    @Column(name="desc", length=50, nullable=false)
     private String desc;
 
+    @Column(name="targetDate")
     private Date targetDate;
     
+    @Column(name="isDone", length=100, nullable=false)
     private boolean isDone;
 
     public Todo() {
