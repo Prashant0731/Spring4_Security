@@ -1,51 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ page isELIgnored="false" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>	
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Theme Made By www.w3schools.com -->
-  <title>Bootstrap Theme Company Page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link href="static/css/company.css" rel="stylesheet">
-  <link href="<c:url value='/static/css/style.css' />" rel="stylesheet"></link>
-  <link rel="stylesheet" href="D:/WORKSPACE/Spring4_Security/Pics">
-  
-</head>
-
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-
-	<nav class="navbar navbar-default navbar-fixed-top">
-	  <div class="container">
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>                        
-	      </button>
-	      <a class="navbar-brand" href="#myPage"><b>PPOA</b>  Developers</a>   		
-	    </div>
-	    <div class="collapse navbar-collapse" id="myNavbar">
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="home">HOME</a></li>
-	        <li><a href="#services">SERVICES</a></li>
-	        <li><a href="#portfolio">PORTFOLIO</a></li>
-	        <li><a href="#pricing">PRICING</a></li>
-	        <li><a href="#about">ABOUT</a></li>
-	        <li><a href="contactUs">CONTACT</a></li>
-	        <li><a href="login">LOGIN</a></li>
-	        <li><a href="list-todos">TODO</a></li>
-	      </ul>
-	    </div>
-	  </div>
-	</nav>
+<%@ include file="templates/headerMillennium.jsp" %>
+<%@ include file="templates/navigationMillennium.jsp" %>
 
 <div class="jumbotron text-center">
   <h1>Millennium</h1> 
@@ -284,7 +238,7 @@
         <div class="panel-footer">
           <h3>Free</h3>
           <h4>6 month</h4>
-          <a button class="btn btn-lg" href="newuser">Sign Up </button></a>
+          <a type="button" class="btn btn-lg" href="newuser">Sign Up</a>
         </div>
       </div>      
     </div>     
@@ -303,7 +257,7 @@
         <div class="panel-footer">
           <h3>$19</h3>
           <h4>1 year</h4>
-          <a button class="btn btn-lg" href="newuser">Sign Up </button></a>
+          <a type="button" class="btn btn-lg" href="newuser">Sign Up</a>
        
         </div>
       </div>      
@@ -323,7 +277,7 @@
         <div class="panel-footer">
           <h3>$29</h3>
           <h4>1 year</h4>
-          <a button class="btn btn-lg" href="newuser">Sign Up </button></a>
+          <a type="button" class="btn btn-lg" href="newuser">Sign Up</a>
         </div>
       </div>      
     </div>    
@@ -331,19 +285,8 @@
 </div>
 
 <!-- Container (Contact Section) -->
-
-
 <!-- Image of location/map -->
  <img src="https://www.w3schools.com/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%"> 
 <!-- <iframe style="align-content: center;" src="https://www.google.com/maps/embed?pb=!4v1552630733353!6m8!1m7!1sCAoSLEFGMVFpcFBqZU13cnlsZ1hfclRseUxrMUtEeXFJOC1HbzRIcl85cUZwUWda!2m2!1d22.6852093!2d75.8730774!3f302.95!4f23.060000000000002!5f1.2780929574532185" class="w3-image w3-greyscale-min" width="1300" height="393"  style="width:100%" ></iframe> -->
 
-<footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  <p>Bootstrap Theme Made By <a href="/" title="Visit Millennium">Millennium</a></p>
-</footer>
-
-<script src="static/js/sample.js"></script>	
- </body>
-</html>
+<%@ include file="templates/footerMillennium.jsp" %>

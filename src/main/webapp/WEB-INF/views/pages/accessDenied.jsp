@@ -1,15 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ page isELIgnored="false" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ include file="templates/headerMillennium.jsp" %>
+<%@ include file="templates/navigationMillennium.jsp" %>
 
-<html>
-	<head>
-	    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	    <title>AccessDenied page</title>
-	    <link href="<c:url value='/static/css/w3school.css' />" rel="stylesheet"></link>
-	</head>
-<body >
 <a href="home" class="myButton1"> Back </a><br>
 <div class="generic-container">
 	<div class="authbar">
@@ -23,5 +14,4 @@
 	</div>
 </div>
 
-</body>
-</html>
+<%@ include file="templates/footerMillennium.jsp" %>

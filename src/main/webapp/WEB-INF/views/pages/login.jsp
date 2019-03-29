@@ -1,26 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ page isELIgnored="false" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
- 
-<html>
-<head>
-	<meta charset="ISO-8859-1">
-	<meta charset="utf-8">
-	<title>Login page</title>
-	<link href="<c:url value='/static/css/w3school.css' />" rel="stylesheet"></link>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<link href="static/css/company.css" rel="stylesheet">	
-	<script src="https://www.google.com/recaptcha/api.js"></script>
-	<link href="<c:url value='/static/css/style.css' />" rel="stylesheet"></link>
-</head>
-
-<body>
+<%@ include file="templates/headerMillennium.jsp" %>
+<%@ include file="templates/navigationMillennium.jsp" %>
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -89,13 +68,4 @@
 	    </form>
 	</div>
 
-<footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  <p>Bootstrap Theme Made By <a href="/" title="Visit Millennium">Millennium</a></p>
-</footer>
-
-<script src="static/js/sample.js"></script>	
- </body>
-</html>
+<%@ include file="templates/footerMillennium.jsp" %>

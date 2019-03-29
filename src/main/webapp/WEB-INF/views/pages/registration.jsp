@@ -1,25 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ page isELIgnored="false" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
- 
-<html>
- 
-<head>
-    <title>User Registration Form</title>
-   	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
-    <link href="<c:url value='/static/css/w3school.css' />" rel="stylesheet"></link>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<link href="static/css/company.css" rel="stylesheet">   
-</head>
- 
-<body >
+<%@ include file="templates/headerMillennium.jsp" %>
+<%@ include file="templates/navigationMillennium.jsp" %>
+
+
 	<a href="list" class="myButton1"> Back </a><br>
     <div class="generic-container">
         <div class="well lead" style="text-align: center;"><b>-User Registration Form-</b></div>
@@ -128,13 +110,4 @@
         </form:form>
     </div>
     
-<footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  <p>Bootstrap Theme Made By <a href="home#about" title="Visit Millennium">Millennium</a></p>
-</footer>
-
-<script src="static/js/sample.js"></script>	
- </body>
-</html>
+<%@ include file="templates/footerMillennium.jsp" %>
